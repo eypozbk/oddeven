@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Odd and Even</title>
+</head>
+<body>
+    <input type="number" id="index">
+    <button>Hesapla</button>
+    <h2 id="çıktı" ></h2>
+
+    <script>
+        let index = document.querySelector("#index");
+        let button = document.querySelector("button");
+        let çıktı = document.querySelector("#çıktı");
+
+        button.addEventListener("click", function(){ 
+            var toplam = 0;
+            var  num = index.value;
+            while(num>0){
+                toplam += num % 10;
+                num = Math.floor(num / 10);
+            }
+            
+            if (toplam % 2 == 0){
+                çıktı.innerHTML = ` ${toplam} Even `;
+            }
+            else{ çıktı.innerHTML = ` ${toplam} Odd`; 
+            }
+
+            }
+        )
+            
+       
+    </script>
+</body> 
+</html>
